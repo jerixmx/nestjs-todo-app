@@ -16,9 +16,9 @@
     "database": "todo_db",
     "synchronize": false,
     "logging": true,
-    "entities": ["src/**/*.entity.ts", "dist/**/*.entity.js"],
-    "migrations": ["src/migration/**/*.ts", "dist/migration/**/*.js"],
-    "subscribers": ["src/subscriber/**/*.ts", "dist/subscriber/**/*.js"],
+    "entities": ["dist/**/*.entity.js"],
+    "migrations": ["dist/migration/**/*.js"],
+    "subscribers": ["dist/subscriber/**/*.js"],
     "cli": {
       "entitiesDir": "src",
       "migrationsDir": "src/migration",
