@@ -43,7 +43,7 @@ export class TodoController {
     @Param('id') id: string,
     @Body() todoDto: TodoDto,
   ): Promise<TodoDto> {
-    return await this.todoService.updateTodo(id, todoDto);
+    return await this.todoService.updateTodo(todoDto);
   }
 
   @Delete(':id')
