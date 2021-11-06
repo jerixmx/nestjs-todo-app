@@ -1,8 +1,19 @@
 import { TaskEntity } from './task.entity';
 
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+
+@Entity('todo')
 export class TodoEntity {
-  id: string;
-  name: string;
-  description?: string;
-  tasks?: TaskEntity[];
+  @PrimaryGeneratedColumn('uuid') id: string;
+  @Column({ type: 'varchar', nullable: false }) name: string;
+  @Column({ type: 'text', nullable: false }) description?: string;
+  @CreateDateColumn() createdOn?: Date;
+  @CreateDateColumn() updatedOn?: Date;
+  @OneToMany((type) => TaskEntity, (task) => task.todo) tasks?: TaskEntity[];
 }
