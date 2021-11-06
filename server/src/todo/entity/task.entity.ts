@@ -12,5 +12,5 @@ export class TaskEntity {
   @PrimaryGeneratedColumn('uuid') id: string;
   @Column({ type: 'varchar', nullable: false }) name: string;
   @CreateDateColumn() createdOn?: Date;
-  @ManyToOne((type) => TodoEntity, (todo) => todo.tasks) todo?: TodoEntity;
+  @ManyToOne(() => TodoEntity, (todo) => todo.tasks) todo?: TodoEntity;
 }

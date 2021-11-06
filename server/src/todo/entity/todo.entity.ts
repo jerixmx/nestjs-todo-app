@@ -15,5 +15,5 @@ export class TodoEntity {
   @Column({ type: 'text', nullable: false }) description?: string;
   @CreateDateColumn() createdOn?: Date;
   @CreateDateColumn() updatedOn?: Date;
-  @OneToMany((type) => TaskEntity, (task) => task.todo) tasks?: TaskEntity[];
+  @OneToMany(() => TaskEntity, (task) => task.todo) tasks?: TaskEntity[];
 }

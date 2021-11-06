@@ -1,7 +1,6 @@
 import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 import { TaskCreateDto } from '../dto/task.create.dto';
 import { TaskDto } from '../dto/task.dto';
-import { todos } from 'src/mock/todos.mock';
 import { TodoEntity } from '../entity/todo.entity';
 import { TaskEntity } from '../entity/task.entity';
 import { toPromise } from '../../shared/utils';
