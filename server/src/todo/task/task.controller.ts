@@ -33,7 +33,7 @@ export class TaskController {
     @Param('id') todo: string,
     @Body() taskDto: TaskDto,
   ): Promise<TaskDto> {
-    return await this.taskService.createTask(taskDto);
+    return await this.taskService.createTask(todo, taskDto);
   }
 
   @Delete(':id')
