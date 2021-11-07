@@ -6,7 +6,7 @@ import { RegistrationStatus } from 'src/interfaces/registration-status.interface
 import { CreateUserDto } from '@user/dto/user.create.dto';
 import { UserDto } from '@user/dto/user.dto';
 import { LoginUserDto } from '@user/dto/user.login.dto';
-import { UsersService } from '@user/users/users.service';
+import { UsersService } from '@user/users.service';
 
 @Injectable()
 export class AuthService {

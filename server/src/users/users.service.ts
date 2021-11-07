@@ -3,10 +3,10 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { toUserDto } from '@shared/mapper';
 import { comparePasswords } from '@shared/utils';
 import { Repository } from 'typeorm';
-import { CreateUserDto } from '../dto/user.create.dto';
-import { UserDto } from '../dto/user.dto';
-import { LoginUserDto } from '../dto/user.login.dto';
-import { UserEntity } from '../entity/user.entity';
+import { CreateUserDto } from './dto/user.create.dto';
+import { UserDto } from './dto/user.dto';
+import { LoginUserDto } from './dto/user.login.dto';
+import { UserEntity } from './entity/user.entity';
 
 @Injectable()
 export class UsersService {
