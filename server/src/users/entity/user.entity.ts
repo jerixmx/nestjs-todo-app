@@ -1,10 +1,4 @@
-import {
-  BeforeInsert,
-  Column,
-  Entity,
-  ManyToOne,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
+import { BeforeInsert, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import bcrypt = require('bcrypt');
 
 @Entity('user')
@@ -29,8 +23,6 @@ export class UserEntity {
     nullable: false,
   })
   email: string;
-
-  @ManyToOne((type) => UserEntity) owner?: UserEntity;
 
   @BeforeInsert() async hashPassword() {
     this.password = await bcrypt.hash(this.password, 10);
