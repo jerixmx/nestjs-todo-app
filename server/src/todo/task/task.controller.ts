@@ -11,6 +11,7 @@ import {
 import { TaskService } from './task.service';
 import { TaskListDto } from '../dto/task.list.dto';
 import { TaskDto } from '../dto/task.dto';
+import { TaskCreateDto } from '@todo/dto/task.create.dto';
 
 @Controller('api/tasks')
 export class TaskController {
@@ -31,9 +32,9 @@ export class TaskController {
   @UsePipes(new ValidationPipe())
   async create(
     @Param('id') todo: string,
-    @Body() taskDto: TaskDto,
+    @Body() taskCreateDto: TaskCreateDto,
   ): Promise<TaskDto> {
-    return await this.taskService.createTask(todo, taskDto);
+    return await this.taskService.createTask(todo, taskCreateDto);
   }
 
   @Delete(':id')

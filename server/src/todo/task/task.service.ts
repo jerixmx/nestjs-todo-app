@@ -36,8 +36,11 @@ export class TaskService {
     return tasks.map((task) => toTaskDto(task));
   }
 
-  async createTask(todoId: string, taskDto: TaskCreateDto): Promise<TaskDto> {
-    const { name } = taskDto;
+  async createTask(
+    todoId: string,
+    taskCreateDto: TaskCreateDto,
+  ): Promise<TaskDto> {
+    const { name } = taskCreateDto;
 
     const todo: TodoEntity = await this.todoRepo.findOne({
       where: { id: todoId },
