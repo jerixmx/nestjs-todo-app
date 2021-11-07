@@ -8,7 +8,7 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { UserEntity } from 'src/users/entity/user.entity';
+import { UserEntity } from '@user/entity/user.entity';
 
 @Entity('todo')
 export class TodoEntity {

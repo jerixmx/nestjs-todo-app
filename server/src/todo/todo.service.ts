@@ -6,8 +6,8 @@ import { TodoDto } from './dto/todo.dto';
 import { TodoEntity } from './entity/todo.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { UserDto } from 'src/users/dto/user.dto';
-import { UsersService } from 'src/users/users/users.service';
+import { UserDto } from '@user/dto/user.dto';
+import { UsersService } from '@user/users/users.service';
 
 @Injectable()
 export class TodoService {

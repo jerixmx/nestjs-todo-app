@@ -3,10 +3,10 @@ import { JwtService } from '@nestjs/jwt';
 import { LoginStatus } from 'src/interfaces/login-status.interface';
 import { JwtPayload } from 'src/interfaces/payload.interface';
 import { RegistrationStatus } from 'src/interfaces/registration-status.interface';
-import { CreateUserDto } from 'src/users/dto/user.create.dto';
-import { UserDto } from 'src/users/dto/user.dto';
-import { LoginUserDto } from 'src/users/dto/user.login.dto';
-import { UsersService } from 'src/users/users/users.service';
+import { CreateUserDto } from '@user/dto/user.create.dto';
+import { UserDto } from '@user/dto/user.dto';
+import { LoginUserDto } from '@user/dto/user.login.dto';
+import { UsersService } from '@user/users/users.service';
 
 @Injectable()
 export class AuthService {

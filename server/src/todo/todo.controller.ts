@@ -13,7 +13,7 @@ import {
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { toPromise } from '@shared/utils';
-import { UserDto } from 'src/users/dto/user.dto';
+import { UserDto } from '@user/dto/user.dto';
 import { TodoCreateDto } from './dto/todo.create.dto';
 import { TodoDto } from './dto/todo.dto';
 import { TodoListDto } from './dto/todo.list.dto';

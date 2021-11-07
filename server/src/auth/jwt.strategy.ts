@@ -2,7 +2,7 @@ import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import { JwtPayload } from 'src/interfaces/payload.interface';
-import { UserDto } from 'src/users/dto/user.dto';
+import { UserDto } from '@user/dto/user.dto';
 import { AuthService } from './auth.service';
 
 @Injectable()
