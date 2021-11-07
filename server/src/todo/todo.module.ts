@@ -8,12 +8,13 @@ import { TodoEntity } from './entity/todo.entity';
 import { TaskEntity } from './entity/task.entity';
 import { UsersModule } from 'src/users/users.module';
 import { AuthModule } from 'src/auth/auth.module';
+import { UserEntity } from 'src/users/entity/user.entity';
 
 @Module({
   imports: [
     UsersModule,
     AuthModule,
-    TypeOrmModule.forFeature([TodoEntity, TaskEntity]),
+    TypeOrmModule.forFeature([TodoEntity, TaskEntity, UserEntity]),
   ],
   controllers: [TodoController, TaskController],
   providers: [TodoService, TaskService],
