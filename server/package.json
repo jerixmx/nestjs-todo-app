@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build",
+    "build": "tsc -p tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "run:services": "docker-compose up -d && exit 0",
     "TypeORM": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
